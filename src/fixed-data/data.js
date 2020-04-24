@@ -4,6 +4,7 @@ export const data = [
         label: 'შექმენით ცვლადი, სახელად name.',
         topic: 'ცვლადი',
         example: 'var yourName;',
+        codeResult: 'undefined',
         result: 'var name;',
     },
     {
@@ -11,13 +12,17 @@ export const data = [
         label: 'შექმენით name ცვლადი და მას მიანიჭეთ მნიშვნელობა = გიორგი.',
         topic: 'ცვლადი',
         example: 'var yourName = "ნიკა" ',
+        codeResult: 'ნიკა',
         result: 'var name = "გიორგი";',
     },
     {
         id: 3,
-        label: 'შექმენით name ცვლადი და მას მიანიჭეთ მნიშვნელობა = გიორგი.',
+        label: 'შექმენით name ცვლადი და surname, name: დათო, surname: ვაშაყმაძე და ცვლად name-ს მიუმატეთ ცვლადი surname.',
         topic: 'ცვლადი',
-        example: 'var yourName = "ნიკა" ',
-        result: 'var name = "გიორგიsas";',
+        example: 'var name = "გიგა"',
+        example2: 'var surname = "ანთია"',
+        example3: 'name + surname;',
+        codeResult: 'დათოვაშაყმაძე',
+        result: 'var name = "დათო";var surname = "ვაშაყმაძე";name + surname;',
     },
 ]

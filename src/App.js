@@ -1,16 +1,11 @@
-import React, {useState} from 'react';
+import React from 'react';
 import Item from './components/Items/Item'
+import { Ripple } from 'react-preloaders';
 function App() {
-  const [state, setState] = useState({
-    AceValue: '',
-  })
-
-  const AceHandler = (newValue) => {
-    console.log("change", newValue);
-  }
   return (
     <div className="App">
-      <Item AceHandler={AceHandler}/>
+      <Item />
+      <Ripple color={'#4e4e4e'} />
     </div>
   );
 }

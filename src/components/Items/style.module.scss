@@ -5,19 +5,42 @@
 .navigation {
     width: 350px;
     height: 100vh;
-    background-color: #fff;
-    padding: 5px;
-    border-right:1px solid rgb(202, 202, 202);
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding: 10px;
     padding-right: 20px;
+    background-color: rgb(50, 57, 78);
+    /* width */
+::-webkit-scrollbar {
+    width: 2px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+    .ul {
+  
+    }
     .nav_li {
         width: 100%;
-        margin-left: 7px;
         list-style: none;
+        padding: 5px;
         button {
             width: 100%;
             text-align: left;
             background-color: #fff;
-            color: #4e4e4e;
+            color: rgb(50, 57, 78);
             border: 0;
             padding: 10px;
             margin-bottom: 5px;
@@ -26,7 +49,6 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            box-shadow: 0px 0px 3px 0px rgba(189,189,189,1);
             &:focus {
                 outline: none;
             }
@@ -37,23 +59,36 @@
     }
 }
 .example {
+    width: 960px;
     padding: 20px;
     margin-bottom: 15px;
-    background-color: #E8E8E8;
+    background-color: rgb(50, 57, 78);
 }
 .constructor {
-    margin-left: 20px;
-    margin-top: 5px;
+    margin-left: 30px;
     h4,h5 {
-        color: #4e4e4e;
+        color: #fff;
+    }
+    h4 {
+        font-family: "BPG Arial Caps", sans-serif;
+    }
+    h5 {
+        margin-top: 10px;
+        font-family: "BPG Arial", sans-serif;
     }
 }
 .onSubmit {
-    background-color: #E8E8E8;
+    background-color: #ffffff;
+    color: rgb(50, 57, 78);
     border: 0;
     padding:10px;
-    box-shadow: 0px 0px 3px 0px rgba(189,189,189,1);
     margin-top: 10px;
-    margin-left: 2px;
+    margin-left: 0px;
     cursor: pointer;
+}
+.result {
+    margin-top: 10px;
+    background-color: #ffffff;
+    color: rgb(50, 57, 78);
+    padding: 10px;
 }

@@ -1,57 +1,85 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import { data } from "../../fixed-data/data"
 import Ace from "../Ace/Ace"
 import style from "./style.module.scss"
-import {CheckOutlined} from '@ant-design/icons'
+import { CheckOutlined } from "@ant-design/icons"
 const Item = () => {
   const [state, setState] = useState({
-    AceValue: "",
-    active: 1,
     correct: 0,
+    store: [],
   })
+  const [active, setActive] = useState(1);
+  const [aceValue, setAceValue] = useState('')
   const onChange = (newValue) => {
-    setState({ ...state, AceValue: newValue })
+    setAceValue(newValue);
   }
-  const submit = (result, topic) => {
-    if (result === state.AceValue) {
-      alert(true)
-      localStorage.setItem(`${topic}`, [state.AceValue])
+  const submit = async (result, topic) => {
+    if (result === aceValue.replace(/\n/g, '')) {
+      await localStorage.setItem(`${topic}`, [aceValue])
+      setAceValue('');
     } else {
       alert(false)
     }
-    console.log(state.AceValue + result)
+    console.log(aceValue.replace('\n', ''))
   }
+  useEffect(() => {
+    // const storage = localStorage.getItem(`${item.id}-${item.topic}`);
+    const timer = setTimeout(() => {
+      setState({
+        ...state,
+        store: data.map((item) => ({
+          id: item.id,
+          label: item.label,
+          topic: item.topic,
+          example: item.example,
+          example2: item.example2,
+          example3: item.example3,
+          codeResult: item.codeResult,
+          result: item.result,
+          storageResult: localStorage.getItem(`${item.id}-${item.topic}`),
+        })),
+      })
+    }, 3000);
+  }, [state.store])
   return (
     <div className={style.container}>
       <nav className={style.navigation}>
-        <ul>
-          {data.map((item) => (
+        <ul className={style.ul}>
+          {state.store.map((item) => (
             <li key={item.id} className={style.nav_li}>
               <button
                 onClick={() =>
-                  setState({ ...state, active: item.id, AceValue: "" })
+                  setActive(item.id)
                 }
               >
                 <span>თემა: {item.topic}</span>
-                {localStorage.getItem(`${item.id}-${item.topic}`) !== null && (
-                  <CheckOutlined style={{color: "rgb(6, 170, 47)"}} />
+                {item.storageResult !== null && (
+                  <CheckOutlined style={{ color: "rgb(6, 170, 47)" }} />
                 )}
               </button>
             </li>
           ))}
         </ul>
       </nav>
-      {data.map((item) => {
+      {state.store.map((item) => {
         const topic = `${item.id}-${item.topic}`
         return (
-          item.id === state.active && (
+          item.id === active && (
             <div className={style.constructor} key={item.id}>
               <div className={style.example}>
                 <h4>მითითება: {item.label}</h4>
-                <h4>მაგალითი: {item.example}</h4>
+                <h5>მაგალითი: {item.example}</h5>
+                {item.example2 && <h5>მაგალითი: {item.example2}</h5>}
+                {item.example3 && <h5>მაგალითი: {item.example3}</h5>}
               </div>
-              <Ace onChange={onChange} aceValue={state.AceValue} />
-              <button onClick={() => submit(item.result, topic)} className={style.onSubmit}>
+              <Ace onChange={onChange} aceValue={localStorage.getItem(topic) ? localStorage.getItem(topic) : aceValue} />
+              <div className={style.result}>
+                <span>შედეგი: {localStorage.getItem(topic) && item.codeResult}</span>
+              </div>
+              <button
+                onClick={() => submit(item.result, topic)}
+                className={style.onSubmit}
+              >
                 დადასტურება
               </button>
             </div>
