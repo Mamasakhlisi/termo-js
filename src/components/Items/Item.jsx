@@ -3,6 +3,7 @@ import { data } from "../../fixed-data/data"
 import Ace from "../Ace/Ace"
 import style from "./style.module.scss"
 import { CheckOutlined } from "@ant-design/icons"
+import giphy from './giphy.gif'
 const Item = () => {
   const [state, setState] = useState({
     correct: 0,
@@ -86,6 +87,9 @@ const Item = () => {
           )
         )
       })}
+      <div className={style.logo}>
+        <img src={giphy} alt=""/>
+      </div>
     </div>
   )
 }

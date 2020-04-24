@@ -1,6 +1,16 @@
 .container {
     width: 100%;
+    height: 100vh;
     display: flex;
+    position: relative;
+    .logo {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        img {
+            width: 120px;
+        }
+    }
 }
 .navigation {
     width: 350px;
@@ -9,7 +19,7 @@
     overflow-x: hidden;
     padding: 10px;
     padding-right: 20px;
-    background-color: rgb(50, 57, 78);
+    background-color: #E9B928;
     /* width */
 ::-webkit-scrollbar {
     width: 2px;
@@ -40,7 +50,7 @@
             width: 100%;
             text-align: left;
             background-color: #fff;
-            color: rgb(50, 57, 78);
+            color: #282828;
             border: 0;
             padding: 10px;
             margin-bottom: 5px;
@@ -62,7 +72,7 @@
     width: 960px;
     padding: 20px;
     margin-bottom: 15px;
-    background-color: rgb(50, 57, 78);
+    background-color: #E9B928;
 }
 .constructor {
     margin-left: 30px;
@@ -78,8 +88,8 @@
     }
 }
 .onSubmit {
-    background-color: #ffffff;
-    color: rgb(50, 57, 78);
+    background-color: #E9B928;
+    color: #fff;
     border: 0;
     padding:10px;
     margin-top: 10px;
