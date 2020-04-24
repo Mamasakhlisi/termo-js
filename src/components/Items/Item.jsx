@@ -3,28 +3,26 @@ import { data } from "../../fixed-data/data"
 import Ace from "../Ace/Ace"
 import style from "./style.module.scss"
 import { CheckOutlined } from "@ant-design/icons"
-import giphy from './giphy.gif'
+import giphy from "./giphy.gif"
 const Item = () => {
   const [state, setState] = useState({
     correct: 0,
     store: [],
   })
-  const [active, setActive] = useState(1);
-  const [aceValue, setAceValue] = useState('')
+  const [active, setActive] = useState(1)
+  const [aceValue, setAceValue] = useState("")
   const onChange = (newValue) => {
-    setAceValue(newValue);
+    setAceValue(newValue)
   }
   const submit = async (result, topic) => {
-    if (result === aceValue.replace(/\n/g, '')) {
+    if (result === aceValue.replace(/\n/g, "")) {
       await localStorage.setItem(`${topic}`, [aceValue])
-      setAceValue('');
+      setAceValue("")
     } else {
-      alert(false)
+      alert("შეცდომა!")
     }
-    console.log(aceValue.replace('\n', ''))
   }
   useEffect(() => {
-    // const storage = localStorage.getItem(`${item.id}-${item.topic}`);
     const timer = setTimeout(() => {
       setState({
         ...state,
@@ -40,7 +38,7 @@ const Item = () => {
           storageResult: localStorage.getItem(`${item.id}-${item.topic}`),
         })),
       })
-    }, 3000);
+    }, 3000)
   }, [state.store])
   return (
     <div className={style.container}>
@@ -48,11 +46,7 @@ const Item = () => {
         <ul className={style.ul}>
           {state.store.map((item) => (
             <li key={item.id} className={style.nav_li}>
-              <button
-                onClick={() =>
-                  setActive(item.id)
-                }
-              >
+              <button onClick={() => setActive(item.id)}>
                 <span>თემა: {item.topic}</span>
                 {item.storageResult !== null && (
                   <CheckOutlined style={{ color: "rgb(6, 170, 47)" }} />
@@ -73,9 +67,18 @@ const Item = () => {
                 {item.example2 && <h5>მაგალითი: {item.example2}</h5>}
                 {item.example3 && <h5>მაგალითი: {item.example3}</h5>}
               </div>
-              <Ace onChange={onChange} aceValue={localStorage.getItem(topic) ? localStorage.getItem(topic) : aceValue} />
+              <Ace
+                onChange={onChange}
+                aceValue={
+                  localStorage.getItem(topic)
+                    ? localStorage.getItem(topic)
+                    : aceValue
+                }
+              />
               <div className={style.result}>
-                <span>შედეგი: {localStorage.getItem(topic) && item.codeResult}</span>
+                <span>
+                  შედეგი: {localStorage.getItem(topic) && item.codeResult}
+                </span>
               </div>
               <button
                 onClick={() => submit(item.result, topic)}
@@ -88,7 +91,7 @@ const Item = () => {
         )
       })}
       <div className={style.logo}>
-        <img src={giphy} alt=""/>
+        <img src={giphy} alt="" />
       </div>
     </div>
   )

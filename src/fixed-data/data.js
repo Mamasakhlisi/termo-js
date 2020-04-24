@@ -12,7 +12,7 @@ export const data = [
         label: 'შექმენით name ცვლადი და მას მიანიჭეთ მნიშვნელობა = გიორგი.',
         topic: 'ცვლადი',
         example: 'var yourName = "ნიკა" ',
-        codeResult: 'ნიკა',
+        codeResult: 'გიორგი',
         result: 'var name = "გიორგი";',
     },
     {

@@ -59,6 +59,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            font-family: "BPG Arial", sans-serif;
             &:focus {
                 outline: none;
             }
@@ -95,10 +96,12 @@
     margin-top: 10px;
     margin-left: 0px;
     cursor: pointer;
+    font-family: "BPG Arial Caps", sans-serif;
 }
 .result {
     margin-top: 10px;
     background-color: #ffffff;
     color: rgb(50, 57, 78);
     padding: 10px;
+    font-family: "BPG Arial", sans-serif;
 }
