@@ -1,19 +1,22 @@
 {
   "files": {
-    "main.js": "/termo-js/static/js/main.7d6af871.chunk.js",
-    "main.js.map": "/termo-js/static/js/main.7d6af871.chunk.js.map",
+    "main.css": "/termo-js/static/css/main.86ae92da.chunk.css",
+    "main.js": "/termo-js/static/js/main.e2524ce9.chunk.js",
+    "main.js.map": "/termo-js/static/js/main.e2524ce9.chunk.js.map",
     "runtime-main.js": "/termo-js/static/js/runtime-main.d1c91c3b.js",
     "runtime-main.js.map": "/termo-js/static/js/runtime-main.d1c91c3b.js.map",
-    "static/js/2.360ffbb1.chunk.js": "/termo-js/static/js/2.360ffbb1.chunk.js",
-    "static/js/2.360ffbb1.chunk.js.map": "/termo-js/static/js/2.360ffbb1.chunk.js.map",
+    "static/js/2.221e0d60.chunk.js": "/termo-js/static/js/2.221e0d60.chunk.js",
+    "static/js/2.221e0d60.chunk.js.map": "/termo-js/static/js/2.221e0d60.chunk.js.map",
     "index.html": "/termo-js/index.html",
-    "precache-manifest.18ed75b054f1a8aed8788682e17ba0ee.js": "/termo-js/precache-manifest.18ed75b054f1a8aed8788682e17ba0ee.js",
+    "precache-manifest.600a6b5529a131ca510cc5e5688ad6a1.js": "/termo-js/precache-manifest.600a6b5529a131ca510cc5e5688ad6a1.js",
     "service-worker.js": "/termo-js/service-worker.js",
-    "static/js/2.360ffbb1.chunk.js.LICENSE.txt": "/termo-js/static/js/2.360ffbb1.chunk.js.LICENSE.txt"
+    "static/css/main.86ae92da.chunk.css.map": "/termo-js/static/css/main.86ae92da.chunk.css.map",
+    "static/js/2.221e0d60.chunk.js.LICENSE.txt": "/termo-js/static/js/2.221e0d60.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.d1c91c3b.js",
-    "static/js/2.360ffbb1.chunk.js",
-    "static/js/main.7d6af871.chunk.js"
+    "static/js/2.221e0d60.chunk.js",
+    "static/css/main.86ae92da.chunk.css",
+    "static/js/main.e2524ce9.chunk.js"
   ]
 }
