@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "dbf9efb8ae677f0b892a145cbf7eadf0",
+    "revision": "8f015bc316b61d4a724964c6e95c1a44",
     "url": "/termo-js/index.html"
   },
   {
-    "revision": "e4a1b409ede1da343fec",
-    "url": "/termo-js/static/css/main.f493e89a.chunk.css"
+    "revision": "7a156fe5e1690a5f7fc3",
+    "url": "/termo-js/static/css/main.4970903f.chunk.css"
   },
   {
     "revision": "b0534f56e5b45486effd",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/termo-js/static/js/2.1ceeeb12.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "e4a1b409ede1da343fec",
-    "url": "/termo-js/static/js/main.715d5632.chunk.js"
+    "revision": "7a156fe5e1690a5f7fc3",
+    "url": "/termo-js/static/js/main.11ef39e8.chunk.js"
   },
   {
     "revision": "95107589e71d0c8041b6",
