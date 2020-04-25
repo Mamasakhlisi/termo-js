@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/termo-js/precache-manifest.e3c771d632a374b24077feca67cf799e.js"
+  "/termo-js/precache-manifest.4c934975faf9ea72b02eaadb9876eccd.js"
 );
 
 self.addEventListener('message', (event) => {
