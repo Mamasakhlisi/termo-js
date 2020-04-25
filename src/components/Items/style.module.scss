@@ -85,7 +85,7 @@
                 position: absolute;
                 top: 0;
                 right: 0;
-                background-color: #ccc;
+                background-color: #2E3440;
             }
         }
     }
@@ -93,7 +93,8 @@
         display: flex;
         justify-content: center;
         button {
-            background-color: #ccc;
+            background-color: #2E3440;
+            color:#fff;
             width: 95%;
         }
     }
@@ -106,14 +107,12 @@
 }
 .constructor {
     margin-left: 30px;
-    h4,h5 {
-        color: #282828;
-    }
-    h5 {
+    h3 {
         font-family: "BPG Arial Caps", sans-serif;
     }
     h4 {
         margin-top: 10px;
+        font-weight: 400;
         font-family: "BPG Arial", sans-serif;
     }
     p {
@@ -122,8 +121,8 @@
     }
 }
 .onSubmit {
-    background-color: #E9B928;
-    color: #282828;
+    background-color: #2E3440;
+    color: #fff;
     border: 0;
     padding:10px;
     margin-top: 10px;
@@ -133,8 +132,8 @@
 }
 .result {
     margin-top: 10px;
-    background-color: #ffffff;
-    color: #282828;
+    background-color: #2E3440;
+    color: #fff;
     padding: 10px;
     font-family: "BPG Arial", sans-serif;
 }

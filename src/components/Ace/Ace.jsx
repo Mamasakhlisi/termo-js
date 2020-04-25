@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import AceEditor from "react-ace";
 import "ace-builds/src-noconflict/mode-javascript";
-import "ace-builds/src-noconflict/theme-github";
+import "ace-builds/src-noconflict/theme-nord_dark";
 import {AceStyle} from './AceStyle';
 
 const Ace = ({onChange,aceValue}) => {
@@ -9,7 +9,7 @@ const Ace = ({onChange,aceValue}) => {
         <AceStyle>
              <AceEditor
                 mode="javascript"
-                theme="github"
+                theme="nord_dark"
                 onChange={onChange}
                 name="UNIQUE_ID_OF_DIV"
                 editorProps={{ $blockScrolling: true }}
