@@ -10,6 +10,11 @@
         img {
             width: 120px;
         }
+        @media (max-width: 1310px) {
+            img {
+                width:60px;
+            }
+        }
     }
 }
 .navigation {
@@ -104,6 +109,12 @@
     padding: 20px;
     margin-bottom: 15px;
     background-color: #E9B928;
+    @media (max-width:1500px) {
+        width: 810px;
+    }
+    @media (max-width: 1310px) {
+        width: 700px;
+    }
 }
 .constructor {
     margin-left: 30px;
