@@ -27,12 +27,12 @@
   
   /* Track */
   ::-webkit-scrollbar-track {
-    background: #f1f1f1; 
+    background: #E8E8E8; 
   }
    
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    background: #888; 
+    background: #E8E8E8; 
   }
   
   /* Handle on hover */
@@ -57,15 +57,44 @@
             border-radius: 2px;
             cursor: pointer;
             display: flex;
-            justify-content: space-between;
-            align-items: center;
             font-family: "BPG Arial", sans-serif;
+            position: relative;
+            overflow: hidden;
             &:focus {
                 outline: none;
             }
-            .check {
-                color: rgb(6, 170, 47);
+            .title {
+                width: 280px; 
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap; 
+                transition: 3s;
             }
+            &:hover .title {
+                overflow: visible;
+                margin-left: -200px;
+            }
+            svg {
+                position: absolute;
+                top: 12px;
+                right: 12px;
+            }
+            .check {
+                width: 40px;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                right: 0;
+                background-color: #ccc;
+            }
+        }
+    }
+    .dropdown_li {
+        display: flex;
+        justify-content: center;
+        button {
+            background-color: #ccc;
+            width: 95%;
         }
     }
 }
@@ -78,19 +107,23 @@
 .constructor {
     margin-left: 30px;
     h4,h5 {
-        color: #fff;
-    }
-    h4 {
-        font-family: "BPG Arial Caps", sans-serif;
+        color: #282828;
     }
     h5 {
+        font-family: "BPG Arial Caps", sans-serif;
+    }
+    h4 {
         margin-top: 10px;
         font-family: "BPG Arial", sans-serif;
+    }
+    p {
+        margin-top: 10px;
+        font-family: "BPG Arial", sans-serif; 
     }
 }
 .onSubmit {
     background-color: #E9B928;
-    color: #fff;
+    color: #282828;
     border: 0;
     padding:10px;
     margin-top: 10px;
@@ -101,7 +134,7 @@
 .result {
     margin-top: 10px;
     background-color: #ffffff;
-    color: rgb(50, 57, 78);
+    color: #282828;
     padding: 10px;
     font-family: "BPG Arial", sans-serif;
 }
